@@ -12,6 +12,8 @@ BuildArch:      noarch
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python-pip
 BuildRequires:	python3dist(wheel)
+BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(setuptools_scm)
 %rename python3-%{pypi_name}
 
 %description
