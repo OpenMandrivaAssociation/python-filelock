@@ -14,6 +14,7 @@ BuildRequires:  python-pip
 BuildRequires:	python3dist(wheel)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	python3dist(setuptools-scm)
+BuildRequires:	python3dist(tomli)
 %rename python3-%{pypi_name}
 
 %description
