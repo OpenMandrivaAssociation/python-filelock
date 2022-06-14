@@ -10,7 +10,7 @@ URL:            https://github.com/benediktschmitt/py-filelock
 Source0:	https://files.pythonhosted.org/packages/source/f/filelock/filelock-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python3)
-BuildRequires:  python3dist(setuptools)
+BuildRequires:  python-pip
 %rename python3-%{pypi_name}
 
 %description
@@ -23,17 +23,15 @@ the same lock object twice, it will not block.
 %prep
 %autosetup -n %{pypi_name}-%{version}
 
-# Remove bundled egg-info
-rm -rf %{pypi_name}.egg-info
-
 %build
-%py3_build
+mkdir wheels
+pip wheel --wheel-dir wheels --no-deps --no-build-isolation --verbose .
 
 %install
-%py3_install
+pip install --root=%{buildroot} --no-deps --verbose --ignore-installed --no-warn-script-location --no-index --no-cache-dir --find-links wheels wheels/*.whl
 
 %files
 %license LICENSE
 %doc README.md
 %{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/%{pypi_name}-%{version}-*info
+%{python3_sitelib}/%{pypi_name}-%{version}*info
