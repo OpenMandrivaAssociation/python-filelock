@@ -11,6 +11,7 @@ Source0:	https://files.pythonhosted.org/packages/source/f/filelock/filelock-%{ve
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python-pip
+BuildRequires:	python3dist(wheel)
 %rename python3-%{pypi_name}
 
 %description
