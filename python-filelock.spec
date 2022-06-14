@@ -36,4 +36,4 @@ rm -rf %{pypi_name}.egg-info
 %license LICENSE
 %doc README.md
 %{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/%{pypi_name}-%{version}-*.egg-info
+%{python3_sitelib}/%{pypi_name}-%{version}-*info
