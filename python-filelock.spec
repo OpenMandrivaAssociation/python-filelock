@@ -1,7 +1,7 @@
 %global pypi_name filelock
 
 Name:           python-%{pypi_name}
-Version:        3.7.1
+Version:        3.9.0
 Release:        1
 Summary:        A platform independent file lock
 Group:          Development/Python
@@ -11,10 +11,12 @@ Source0:	https://files.pythonhosted.org/packages/source/f/filelock/filelock-%{ve
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python-pip
-BuildRequires:	python3dist(wheel)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(setuptools-scm)
-BuildRequires:	python3dist(tomli)
+BuildRequires:	python%{pyver}dist(wheel)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(setuptools-scm)
+BuildRequires:	python%{pyver}dist(tomli)
+BuildRequires:	python%{pyver}dist(hatchling)
+BuildRequires:	python%{pyver}dist(hatch-vcs)
 %rename python3-%{pypi_name}
 
 %description
