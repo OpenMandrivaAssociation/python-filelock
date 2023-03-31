@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        3.9.0
-Release:        1
+Release:        2
 Summary:        A platform independent file lock
 Group:          Development/Python
 License:        Unlicense
