@@ -1,23 +1,23 @@
 %global pypi_name filelock
 
-Name:           python-%{pypi_name}
-Version:        3.9.0
-Release:        2
-Summary:        A platform independent file lock
-Group:          Development/Python
-License:        Unlicense
-URL:            https://github.com/benediktschmitt/py-filelock
+Name:		python-%{pypi_name}
+Version:	3.12.3
+Release:	1
+Summary:	A platform independent file lock
+Group:		Development/Python
+License:	Unlicense
+URL:		https://pypi.org/project/filelock
 Source0:	https://files.pythonhosted.org/packages/source/f/filelock/filelock-%{version}.tar.gz
-BuildArch:      noarch
-BuildRequires:  pkgconfig(python3)
-BuildRequires:  python-pip
+BuildArch:	noarch
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python-pip
 BuildRequires:	python%{pyver}dist(wheel)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(setuptools-scm)
 BuildRequires:	python%{pyver}dist(tomli)
 BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(hatch-vcs)
-%rename python3-%{pypi_name}
+%rename	python3-%{pypi_name}
 
 %description
 This package contains a single module, which implements a platform independent
@@ -39,5 +39,5 @@ pip install --root=%{buildroot} --no-deps --verbose --ignore-installed --no-warn
 %files
 %license LICENSE
 %doc README.md
-%{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/%{pypi_name}-%{version}*info
+%{python_sitelib}/%{pypi_name}
+%{python_sitelib}/%{pypi_name}-%{version}*info
