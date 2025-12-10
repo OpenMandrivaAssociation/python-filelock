@@ -1,7 +1,7 @@
 %global pypi_name filelock
 
 Name:		python-%{pypi_name}
-Version:	3.30.0
+Version:	3.20.0
 Release:	1
 Summary:	A platform independent file lock
 Group:		Development/Python
