@@ -1,13 +1,13 @@
 %define module filelock
 
 Name:		python-filelock
-Version:	3.29.0
+Version:	3.29.1
 Release:	1
 Summary:	A platform independent file lock
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/tox-dev/filelock/
-Source0:	%{URL}/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/tox-dev/filelock/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildSystem:	python
 BuildArch:	noarch
