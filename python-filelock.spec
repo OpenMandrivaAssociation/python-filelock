@@ -1,7 +1,7 @@
 %define module filelock
 
 Name:		python-filelock
-Version:	3.29.3
+Version:	3.32.2
 Release:	1
 Summary:	A platform independent file lock
 Group:		Development/Python
